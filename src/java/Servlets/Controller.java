@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Servlets;
 
 import Beans.Adresse;
@@ -70,6 +66,11 @@ public class Controller extends HttpServlet {
         //----------JULIEN-------------------//
         String url = "/WEB-INF/index.jsp";
 
+        
+        if(request.getParameter("index") != null){
+            url = "/WEB-INF/index.jsp";
+        }
+        
         if (session.getAttribute("page") == null) {
             session.setAttribute("page", "/WEB-INF/index.jsp");
         }
